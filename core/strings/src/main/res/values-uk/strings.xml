@@ -134,4 +134,9 @@
     <string name="sleep_timer.button.increment">Довше</string>
     <string name="sleep_timer.button.decrement">Коротше</string>
     <string name="storage_bug_subtitle">На деяких пристроях системні програми не мають необхідного дозволу на доступ до зовнішнього накопичувача. Цей дозвіл необхідний для того, аби Voice мав змогу читати ваші аудіокниги.</string>
+    <string name="settings_progress_sync_title">Progress sync</string>
+    <string name="settings_progress_sync_summary">Choose a folder to sync playback progress with other devices.</string>
+    <string name="settings_progress_sync_summary_selected">Syncing with %1$s</string>
+    <string name="settings_progress_sync_clear">Clear folder</string>
+    <string name="settings_progress_sync_error">Voice can&#39;t access the selected folder. Please choose it again.</string>
 </resources>

@@ -131,4 +131,9 @@
     <string name="onboarding.completion.title">Ai parcurs cu succes acest ghid.</string>
     <string name="review.request.title">Îți place Voice?</string>
     <string name="review.request.content">Ne pasă de feedback-ul tău! Te rugăm să ne evaluezi și să ne descrii experiența ta! Ne ajută să facem îmbunătățiri și să oferim o experiență mai bună.</string>
+    <string name="settings_progress_sync_title">Progress sync</string>
+    <string name="settings_progress_sync_summary">Choose a folder to sync playback progress with other devices.</string>
+    <string name="settings_progress_sync_summary_selected">Syncing with %1$s</string>
+    <string name="settings_progress_sync_clear">Clear folder</string>
+    <string name="settings_progress_sync_error">Voice can&#39;t access the selected folder. Please choose it again.</string>
 </resources>

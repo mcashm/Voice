@@ -122,6 +122,11 @@
     <string name="onboarding_analytics_consent_privacy_policy">Privacy Policy</string>
     <string name="settings_analytics_consent_title">Analytics</string>
     <string name="settings_analytics_consent_description">Allow anonymous usage data collection to help improve the app</string>
+    <string name="settings_progress_sync_title">Progress sync</string>
+    <string name="settings_progress_sync_summary">Choose a folder to sync playback progress with other devices.</string>
+    <string name="settings_progress_sync_summary_selected">Syncing with %1$s</string>
+    <string name="settings_progress_sync_clear">Clear folder</string>
+    <string name="settings_progress_sync_error">Voice can&#39;t access the selected folder. Please choose it again.</string>
     <string name="review.request.title">Enjoying Voice?</string>
     <string name="review.request.content">Your feedback matters to us! If you have a moment, rate us and share your experience. It helps us to make improvements and offer a better listening experience.</string>
     <string name="review.request.button.yes">Rate Now</string>

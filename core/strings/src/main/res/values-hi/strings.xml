@@ -128,4 +128,9 @@
     </plurals>
     <string name="storage_bug_subtitle">कुछ उपकरणों के लिए, एक सिस्टम ऐप में बाहरी स्टोरेज तक पहुंचने के लिए आवश्यक अनुमति नहीं है। Voice के लिए आपकी ऑडियोबुक पढ़ने के लिए यह पहुंच आवश्यक है।</string>
     <string name="review.request.content">आपकी प्रतिक्रिया हमारे लिए मायने रखती है! यदि आपके पास कुछ समय है, तो हमें रेट करें और अपना अनुभव साझा करें। यह हमें सुधार करने और बेहतर सुनने का अनुभव प्रदान करने में मदद करता है।</string>
+    <string name="settings_progress_sync_title">Progress sync</string>
+    <string name="settings_progress_sync_summary">Choose a folder to sync playback progress with other devices.</string>
+    <string name="settings_progress_sync_summary_selected">Syncing with %1$s</string>
+    <string name="settings_progress_sync_clear">Clear folder</string>
+    <string name="settings_progress_sync_error">Voice can&#39;t access the selected folder. Please choose it again.</string>
 </resources>

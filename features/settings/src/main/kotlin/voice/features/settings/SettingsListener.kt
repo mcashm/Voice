@@ -1,5 +1,6 @@
 package voice.features.settings
 
+import android.net.Uri
 import java.time.LocalTime
 
 interface SettingsListener {
@@ -20,6 +21,8 @@ interface SettingsListener {
   fun setAutoSleepTimerStart(time: LocalTime)
   fun setAutoSleepTimerEnd(time: LocalTime)
   fun toggleAnalytics()
+  fun onProgressSyncFolderSelected(uri: Uri)
+  fun onClearProgressSyncFolder()
 
   companion object {
     fun noop() = object : SettingsListener {
@@ -40,6 +43,8 @@ interface SettingsListener {
       override fun setAutoSleepTimerStart(time: LocalTime) {}
       override fun setAutoSleepTimerEnd(time: LocalTime) {}
       override fun toggleAnalytics() {}
+      override fun onProgressSyncFolderSelected(uri: Uri) {}
+      override fun onClearProgressSyncFolder() {}
     }
   }
 }

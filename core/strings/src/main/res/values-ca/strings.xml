@@ -131,4 +131,9 @@
     <string name="review.request.content">Els seus comentaris ens importen. Si teniu un moment, valoreu-nos i compartiu la seva experiència. Ens ajuda a fer millores i a oferir una millor experiència.</string>
     <string name="storage_bug_subtitle">Per a determinats dispositius, a una aplicació del sistema li falta el permís necessari per accedir a l\'emmagatzematge extern. Aquest accés és essencial perquè el Voice llegeixi els audiollibres.</string>
     <string name="migration_hint_content">A causa dels canvis en les versions més noves d\'Android, és necessari seleccionar la carpeta de l\'audiollibre utilitzant el selector del sistema. \n \nFeu clic a la icona de dalt per veure les posicions antigues del llibre.</string>
+    <string name="settings_progress_sync_title">Progress sync</string>
+    <string name="settings_progress_sync_summary">Choose a folder to sync playback progress with other devices.</string>
+    <string name="settings_progress_sync_summary_selected">Syncing with %1$s</string>
+    <string name="settings_progress_sync_clear">Clear folder</string>
+    <string name="settings_progress_sync_error">Voice can&#39;t access the selected folder. Please choose it again.</string>
 </resources>

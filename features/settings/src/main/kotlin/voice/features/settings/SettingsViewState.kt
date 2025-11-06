@@ -13,6 +13,9 @@ data class SettingsViewState(
   val autoSleepTimer: AutoSleepTimerViewState,
   val showAnalyticSetting: Boolean,
   val analyticsEnabled: Boolean,
+  val progressSyncStatus: String,
+  val progressSyncConfigured: Boolean,
+  val progressSyncError: String?,
 ) {
 
   enum class Dialog {
@@ -33,6 +36,9 @@ data class SettingsViewState(
         autoSleepTimer = AutoSleepTimerViewState.preview(),
         analyticsEnabled = false,
         showAnalyticSetting = true,
+        progressSyncStatus = "Not configured",
+        progressSyncConfigured = false,
+        progressSyncError = null,
       )
     }
   }
