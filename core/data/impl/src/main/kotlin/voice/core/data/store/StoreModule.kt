@@ -161,4 +161,15 @@ internal object StoreModule {
   fun analyticsConsent(factory: VoiceDataStoreFactory): DataStore<Boolean> {
     return factory.boolean("analyticsConsent", defaultValue = false)
   }
+
+  @Provides
+  @SingleIn(AppScope::class)
+  @ProgressSyncStore
+  fun progressSyncStore(factory: VoiceDataStoreFactory): DataStore<String?> {
+    return factory.create(
+      serializer = String.serializer().nullable,
+      fileName = "progressSyncUri",
+      defaultValue = null,
+    )
+  }
 }

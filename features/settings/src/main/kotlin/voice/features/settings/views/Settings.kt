@@ -1,6 +1,9 @@
 package voice.features.settings.views
 
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.HelpOutline
@@ -8,15 +11,18 @@ import androidx.compose.material.icons.automirrored.outlined.ViewList
 import androidx.compose.material.icons.outlined.Analytics
 import androidx.compose.material.icons.outlined.BugReport
 import androidx.compose.material.icons.outlined.Close
+import androidx.compose.material.icons.outlined.Folder
 import androidx.compose.material.icons.outlined.GridView
 import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material.icons.outlined.Lightbulb
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ListItem
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -56,6 +62,9 @@ private fun Settings(
   viewState: SettingsViewState,
   listener: SettingsListener,
 ) {
+  val folderPickerLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) { uri ->
+    uri?.let(listener::onProgressSyncFolderSelected)
+  }
   val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
   Scaffold(
     modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
@@ -90,6 +99,15 @@ private fun Settings(
         item {
           AnalyticsRow(analyticsEnabled = viewState.analyticsEnabled, toggle = listener::toggleAnalytics)
         }
+      }
+      item {
+        ProgressSyncRow(
+          status = viewState.progressSyncStatus,
+          error = viewState.progressSyncError,
+          configured = viewState.progressSyncConfigured,
+          onClick = { folderPickerLauncher.launch(null) },
+          onClear = listener::onClearProgressSyncFolder,
+        )
       }
       item {
         ListItem(
@@ -234,6 +252,46 @@ private fun AnalyticsRow(
         checked = analyticsEnabled,
         onCheckedChange = { toggle() },
       )
+    },
+  )
+}
+
+@Composable
+private fun ProgressSyncRow(
+  status: String,
+  error: String?,
+  configured: Boolean,
+  onClick: () -> Unit,
+  onClear: () -> Unit,
+) {
+  ListItem(
+    modifier = Modifier.clickable { onClick() },
+    leadingContent = {
+      Icon(
+        imageVector = Icons.Outlined.Folder,
+        contentDescription = stringResource(StringsR.string.settings_progress_sync_title),
+      )
+    },
+    headlineContent = {
+      Text(text = stringResource(StringsR.string.settings_progress_sync_title))
+    },
+    supportingContent = {
+      Column {
+        Text(text = status)
+        if (error != null) {
+          Text(
+            text = error,
+            color = MaterialTheme.colorScheme.error,
+          )
+        }
+      }
+    },
+    trailingContent = {
+      if (configured) {
+        TextButton(onClick = onClear) {
+          Text(text = stringResource(StringsR.string.settings_progress_sync_clear))
+        }
+      }
     },
   )
 }

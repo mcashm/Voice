@@ -142,4 +142,9 @@
     <string name="onboarding_analytics_consent_privacy_policy">Datenschutzerklärung</string>
     <string name="settings_analytics_consent_title">Nutzungsdaten</string>
     <string name="settings_analytics_consent_description">Erlaube die Freigabe anonymer Nutzungsdaten zur Verbesserung der App</string>
+    <string name="settings_progress_sync_title">Progress sync</string>
+    <string name="settings_progress_sync_summary">Choose a folder to sync playback progress with other devices.</string>
+    <string name="settings_progress_sync_summary_selected">Syncing with %1$s</string>
+    <string name="settings_progress_sync_clear">Clear folder</string>
+    <string name="settings_progress_sync_error">Voice can&#39;t access the selected folder. Please choose it again.</string>
 </resources>

@@ -106,4 +106,9 @@
     <string name="onboarding.explanation.subtitle">使用 Voice，您可以单独添加书籍文件或将它们组织到文件夹中。您来选择！</string>
     <string name="onboarding.explanation.title">您的图书馆，您的风格</string>
     <string name="onboarding.completion.subtitle">您的第一本有声书已准备好播放。与 Voice 一起享受您的旅程！</string>
+    <string name="settings_progress_sync_title">Progress sync</string>
+    <string name="settings_progress_sync_summary">Choose a folder to sync playback progress with other devices.</string>
+    <string name="settings_progress_sync_summary_selected">Syncing with %1$s</string>
+    <string name="settings_progress_sync_clear">Clear folder</string>
+    <string name="settings_progress_sync_error">Voice can&#39;t access the selected folder. Please choose it again.</string>
 </resources>
