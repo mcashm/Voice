@@ -8,7 +8,7 @@ import voice.core.initializer.AppInitializer
 
 @ContributesIntoSet(AppScope::class)
 @Inject
-class ProgressSyncInitializer(
+public class ProgressSyncInitializer(
   private val coordinator: ProgressSyncCoordinator,
 ) : AppInitializer {
 
