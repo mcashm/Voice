@@ -35,9 +35,10 @@ import voice.core.data.store.ProgressSyncStore
 import voice.core.logging.api.Logger
 import kotlin.time.Duration.Companion.seconds
 
+
 @SingleIn(AppScope::class)
 @Inject
-class ProgressSyncCoordinator(
+public class ProgressSyncCoordinator(
   private val application: Application,
   private val bookContentRepo: BookContentRepo,
   private val bookRepository: BookRepository,
