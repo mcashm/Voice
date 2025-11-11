@@ -29,6 +29,7 @@ android {
 }
 
 dependencies {
+  api(projects.core.initializer)
   api(projects.core.data.api)
   api(projects.core.common)
   api(projects.core.documentfile)
