@@ -39,6 +39,7 @@ dependencies {
   implementation(libs.serialization.json)
   implementation(libs.coroutines.core)
   implementation(projects.core.analytics.api)
+  implementation("androidx.documentfile:documentfile:1.0.1")
 
   api(libs.room.runtime)
   ksp(libs.room.compiler)
