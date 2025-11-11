@@ -1,0 +1,26 @@
+name: Manual GitHub APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_name:
+        description: "Version name (e.g. 25.4.1)"
+        required: true
+      version_code:
+        description: "Version code (e.g. 2504001)"
+        required: true
+
+jobs:
+  github_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+      - uses: ./.github/actions/build_setup
+      - name: Build GitHub APK
+        run: fastlane android build_github version:${{ inputs.version_name }}-${{ inputs.version_code }}
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: voice-${{ inputs.version_name }}
+          path: artifacts/*.apk
+          retention-days: 30
