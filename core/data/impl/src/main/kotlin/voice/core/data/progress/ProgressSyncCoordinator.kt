@@ -50,8 +50,8 @@ public class ProgressSyncCoordinator(
 
   private val scope = CoroutineScope(SupervisorJob() + dispatcherProvider.io)
   private val started = AtomicBoolean(false)
-
-  fun start() {
+  
+  public fun start() {
     if (!started.compareAndSet(false, true)) return
     scope.launch { observeForExport() }
     scope.launch { observeForImport() }
